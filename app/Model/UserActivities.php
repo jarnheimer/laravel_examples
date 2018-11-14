@@ -10,11 +10,11 @@ class UserActivities extends Model
     
     public function activity()
     {
-        return $this->belongsTo('App\Model\Activity', 'activity_id', 'id');
+        return $this->belongsTo('App\Model\Activity');
     }
     
     public function userActivitiesAttributes()
     {
-        return $this->hasMany('App\Model\UserActivitiesAttributes', 'user_activity_id', 'id');
+        return $this->hasMany('App\Model\UserActivitiesAttributes', 'user_activity_id');
     }
 }
